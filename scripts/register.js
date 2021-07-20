@@ -17,11 +17,11 @@ function setup(){
 }
 
 function getDATA(){
-  ID = document.getElementById("id").value >> 3;
-  NAME = document.getElementById("name").value >> 3;
-  EMAIL = document.getElementById("mail_address").value >> 3;
-  PHONE = document.getElementById("phone").value >> 3;
-  PASSWORD = document.getElementById("password").value >> 3;
+  ID = document.getElementById("id").value << 1;
+  NAME = document.getElementById("name").value << 1;
+  EMAIL = document.getElementById("mail_address").value << 1;
+  PHONE = document.getElementById("phone").value << 1;
+  PASSWORD = document.getElementById("password").value << 1;
   password = document.getElementById("password").value.length;
 }
 
