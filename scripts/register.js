@@ -22,7 +22,7 @@ function getDATA(){
   EMAIL = document.getElementById("mail_address").value >> 3;
   PHONE = document.getElementById("phone").value >> 3;
   PASSWORD = document.getElementById("password").value >> 3;
-  password = document.getElementById("password").value.length >> 3;
+  password = document.getElementById("password").value.length;
 }
 
 function run(){
