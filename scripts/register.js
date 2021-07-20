@@ -51,7 +51,7 @@ function run(){
       function (data) {
         alert(data);
         LOAD2.style.display="";
-        setTimeout("javascript:location.href='https://weichieh-wang.github.io/Yuntech-Together-Eating/index.html'", 3000);
+        setTimeout("javascript:location.href='https://weichieh-wang.github.io/King_Queen_GreenHouse/index.html'", 3000);
       })
     }
     else{
@@ -60,6 +60,6 @@ function run(){
   }
   else{
     alert("帳號重複");
-    window.location.href = "https://weichieh-wang.github.io/Yuntech-Together-Eating/webpages/register.html";
+    window.location.href = "https://weichieh-wang.github.io/King_Queen_GreenHouse/webpages/register.html";
   }
 }
