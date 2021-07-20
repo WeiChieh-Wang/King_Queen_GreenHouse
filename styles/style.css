@@ -1,0 +1,28 @@
+p{
+    color: red;
+}/*段落色彩*/
+h1{
+    font-size: 60px;
+    text-align: center;
+}
+p, li {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.box {
+    width: 1800px;
+    text-align: right;
+  }
+.a, .b {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+html {
+    background-color: #9DCDEB;
+}
+img,iframe{
+    display: block;
+    margin: 0 auto;
+}
