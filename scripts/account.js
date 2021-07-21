@@ -5,7 +5,7 @@ var i=0;
 var o=document.getElementById("sign");
 function preload(){
   btn= document.getElementById("submit");
-    data1=loadJSON('https://spreadsheets.google.com/feeds/list/1LcYeY_pAKX4kyoUXDZjDA0-DFR5nDcpkuvbhy72JfnU/od6/public/values?alt=json')
+    data1=loadJSON('https://spreadsheets.google.com/feeds/list/1S5Emd0mzEf96JQc2OR17NzqQUJB8jwwMek0k4ZA2iWo/od6/public/values?alt=json')
   var o=document.getElementById("sign");
   user1=window.localStorage.getItem('email');
   if(user1==null){
@@ -14,7 +14,7 @@ function preload(){
   else{
     o.style.display='none';
   }
-  }
+}
 function out(){
   var o=document.getElementById("sign");
   localStorage.removeItem('email');
@@ -39,9 +39,11 @@ function out(){
   let fp = pw.flat(Infinity);
   let fm = mn.flat(Infinity);
   btn.addEventListener('click',()=>{
-    valunm= document.getElementById("username").value;
+    valunm_o= document.getElementById("username").value;
     //valem= document.getElementById("email").value;
-    valpw= document.getElementById("password").value;
+    valpw_o= document.getElementById("password").value;
+    valunm = decode(valunm_o);
+    valpw = decode(valpw_o);
     a=fun.indexOf(valunm) ;
     //b=fe.indexOf(valem);
     c=fp.indexOf(valpw); 
@@ -68,3 +70,12 @@ function out(){
   
 
 function draw(){}
+
+function decode(content){
+  var de = "";
+  for(var u=0; u<content.length; u++){
+    var de_o = content.charCodeAt(u);
+    de += String.fromCharCode(de_o - 2);
+  }
+  return de;
+}
