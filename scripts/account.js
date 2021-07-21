@@ -74,10 +74,10 @@ function setup(){
   })
 }
 
-function decode(content){
+function decode(content_test){
   var de = "";
-  for(var u=0; u<content.length; u++){
-    var de_o = content.charCodeAt(u);
+  for(var u=0; u<content_test.length; u++){
+    var de_o = content_test.charCodeAt(u);
     de += String.fromCharCode(de_o - 2);
   }
   return de;
