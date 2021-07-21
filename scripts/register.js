@@ -17,12 +17,17 @@ function setup(){
 }
 
 function getDATA(){
-  ID = document.getElementById("id").value << 1;
-  NAME = document.getElementById("name").value << 1;
-  EMAIL = document.getElementById("mail_address").value << 1;
-  PHONE = document.getElementById("phone").value << 1;
-  PASSWORD = document.getElementById("password").value << 1;
+  ID_o = document.getElementById("id").value;
+  NAME_o = document.getElementById("name").value;
+  EMAIL_o = document.getElementById("mail_address").value;
+  PHONE_o = document.getElementById("phone").value;
+  PASSWORD_o = document.getElementById("password").value;
   password = document.getElementById("password").value.length;
+  ID = encode(ID_o);
+  NAME = encode(NAME_o);
+  EMAIL = encode(EMAIL_o);
+  PHONE = encode(PHONE_o);
+  PASSWORD = encode(PASSWORD_o);
 }
 
 function run(){
@@ -62,4 +67,22 @@ function run(){
     alert("帳號重複");
     window.location.href = "https://weichieh-wang.github.io/King_Queen_GreenHouse/webpages/register.html";
   }
+}
+
+function encode(content){
+  var en = "";
+  for(var u=0; u<content.length; u++){
+    var en_o = content.charCodeAt(u);
+    en += String.fromCharCode(en_o + 2);
+  }
+  return en;
+}
+
+function decode(content){
+  var de = "";
+  for(var u=0; u<content.length; u++){
+    var de_o = content.charCodeAt(u);
+    de += String.fromCharCode(de_o - 2);
+  }
+  return de;
 }
