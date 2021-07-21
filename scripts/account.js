@@ -43,12 +43,12 @@ function setup(){
   let email_push_flat = email_push.flat(Infinity);
   let password_push_flat = password_push.flat(Infinity);
   let manager_push_flat = manager_push.flat(Infinity);
+  username_push_flat_com = decode(username_push_flat);
+  password_push_flat_com = decode(password_push_flat);
   btn.addEventListener('click',()=>{
     username_val= document.getElementById("username").value;
     //valem= document.getElementById("email").value;
     password_val= document.getElementById("password").value;
-    username_push_flat_com = decode(username_push_flat);
-    password_push_flat_com = decode(password_push_flat);
     a=username_push_flat_com.indexOf(username_val) ;
     //b=fe.indexOf(valem);
     c=password_push_flat_com.indexOf(password_val); 
